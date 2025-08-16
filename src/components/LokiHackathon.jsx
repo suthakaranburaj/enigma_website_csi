@@ -72,8 +72,8 @@ const LokiHackathon = () => {
       <div
         className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/loki.jpeg')`,
-          filter: "brightness(0.9) contrast(1.1)",
+          backgroundImage: `url('/loki.jpg')`,
+          filter: "brightness(0.99) contrast(1.1)",
         }}
       />
 
