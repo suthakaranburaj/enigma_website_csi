@@ -142,7 +142,7 @@ const LokiHackathon = () => {
 
           .glass-effect-strong {
             background: rgba(11, 42, 28, 0.7);
-            backdrop-filter: blur(20px);
+            backdrop-filter: blur(0px);
             border: 1px solid rgba(42, 255, 109, 0.3);
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
           }
