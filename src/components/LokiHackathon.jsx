@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect, useRef } from "react";
 
 const LokiHackathon = () => {
@@ -16,47 +16,48 @@ const LokiHackathon = () => {
   }, []);
 
   // Matrix rain effect
-  // useEffect(() => {
-  //   const canvas = canvasRef.current;
-  //   if (!canvas) return;
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
-  //   const ctx = canvas.getContext("2d");
-  //   canvas.width = window.innerWidth;
-  //   canvas.height = window.innerHeight;
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-  //   // Matrix characters
-  //   const matrix = "LOKI0123456789$%#@!*^=+;:TVAMCUPQRSTUVWXYZ";
-  //   const fontSize = 14;
-  //   const columns = canvas.width / fontSize;
+    // Matrix characters
+    const matrix = "LOKI0123456789$%#@!*^=+;:TVAMCUPQRSTUVWXYZ";
+    const fontSize = 14;
+    const columns = canvas.width / fontSize;
 
-  //   // Create drops for each column
-  //   const drops = [];
-  //   for (let i = 0; i < columns; i++) {
-  //     drops[i] = Math.floor((Math.random() * canvas.height) / fontSize);
-  //   }
+    // Create drops for each column
+    const drops = [];
+    for (let i = 0; i < columns; i++) {
+      drops[i] = Math.floor((Math.random() * canvas.height) / fontSize);
+    }
 
-  //   // Draw function
-  //   const draw = () => {
-  //     ctx.fillStyle = "rgba(11, 42, 28, 0.04)";
-  //     ctx.fillRect(0, 0, canvas.width, canvas.height);
+    // Draw function
+    const draw = () => {
+      ctx.fillStyle = "rgba(11, 42, 28, 0.04)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  //     ctx.font = `${fontSize}px monospace`;
-  //     ctx.fillStyle = "#2aff6d";
+      ctx.font = `${fontSize}px monospace`;
+      // Reduced brightness for matrix characters
+      ctx.fillStyle = "rgba(42, 255, 109, 0.7)";
 
-  //     for (let i = 0; i < drops.length; i++) {
-  //       const text = matrix.charAt(Math.floor(Math.random() * matrix.length));
-  //       ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+      for (let i = 0; i < drops.length; i++) {
+        const text = matrix.charAt(Math.floor(Math.random() * matrix.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
-  //       if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-  //         drops[i] = 0;
-  //       }
-  //       drops[i]++;
-  //     }
-  //   };
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    };
 
-  //   const interval = setInterval(draw, 35);
-  //   return () => clearInterval(interval);
-  // }, []);
+    const interval = setInterval(draw, 35);
+    return () => clearInterval(interval);
+  }, []);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -72,29 +73,29 @@ const LokiHackathon = () => {
         className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('/loki.jpeg')`,
-          filter: "brightness(0.9) contrast(1.2)",
+          filter: "brightness(0.9) contrast(1.1)",
         }}
       />
 
       {/* Matrix Rain Overlay */}
       <canvas
         ref={canvasRef}
-        className="fixed inset-0 z-0 opacity-30 pointer-events-none"
+        className="fixed inset-0 z-0 opacity-20 pointer-events-none"
         style={{ mixBlendMode: "screen" }}
       />
 
-      {/* Overlay to ensure content visibility */}
-      <div className="fixed inset-0 z-1 bg-gradient-to-b from-[#0b2a1c]/90 via-[#0b2a1c]/70 to-[#0b2a1c]/90" />
+      {/* Reduced opacity overlay */}
+      <div className="fixed inset-0 z-1 bg-gradient-to-b from-[#0b2a1c]/70 via-[#0b2a1c]/50 to-[#0b2a1c]/70" />
 
-      {/* TVA Pattern Overlay */}
-      {/* <div
-        className="fixed inset-0 z-0 opacity-20"
+      {/* TVA Pattern Overlay with reduced opacity */}
+      <div
+        className="fixed inset-0 z-0 opacity-10"
         style={{
           backgroundImage: `radial-gradient(circle at 25% 25%, rgba(19, 53, 35, 0.6) 2px, transparent 2px),
              radial-gradient(circle at 75% 75%, rgba(19, 53, 35, 0.4) 1px, transparent 1px)`,
           backgroundSize: "100px 100px",
         }}
-      /> */}
+      />
 
       {/* Main Content */}
       <div className="relative z-10 text-white font-sans overflow-x-hidden">
@@ -112,8 +113,8 @@ const LokiHackathon = () => {
           .bg-gradient-radial {
             background: radial-gradient(
               circle at center,
-              rgba(19, 53, 35, 0.8) 0%,
-              rgba(11, 42, 28, 0.9) 70%
+              rgba(19, 53, 35, 0.6) 0%,
+              rgba(11, 42, 28, 0.7) 70%
             );
           }
 
@@ -129,20 +130,20 @@ const LokiHackathon = () => {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            filter: drop-shadow(0 0 20px #2aff6d);
+            filter: drop-shadow(0 0 15px rgba(42, 255, 109, 0.5));
           }
 
           .glass-effect {
-            background: rgba(19, 53, 35, 0.4);
+            background: rgba(19, 53, 35, 0.3);
             backdrop-filter: blur(15px);
-            border: 1px solid rgba(42, 255, 109, 0.3);
+            border: 1px solid rgba(42, 255, 109, 0.2);
             box-shadow: 0 8px 32px rgba(42, 255, 109, 0.1);
           }
 
           .glass-effect-strong {
-            background: rgba(11, 42, 28, 0.1);
+            background: rgba(11, 42, 28, 0.7);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(42, 255, 109, 0.4);
+            border: 1px solid rgba(42, 255, 109, 0.3);
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
           }
 
@@ -164,7 +165,7 @@ const LokiHackathon = () => {
             background: linear-gradient(
               90deg,
               transparent,
-              rgba(42, 255, 109, 0.6),
+              rgba(42, 255, 109, 0.4),
               transparent
             );
             background-size: 200% 100%;
@@ -173,7 +174,7 @@ const LokiHackathon = () => {
 
           .particle {
             position: absolute;
-            background: #2aff6d;
+            background: rgba(42, 255, 109, 0.7);
             border-radius: 50%;
             pointer-events: none;
           }
@@ -200,11 +201,12 @@ const LokiHackathon = () => {
 
           @keyframes glow {
             0% {
-              text-shadow: 0 0 5px #2aff6d, 0 0 10px #2aff6d, 0 0 15px #2aff6d;
+              text-shadow: 0 0 5px rgba(42, 255, 109, 0.7),
+                0 0 10px rgba(42, 255, 109, 0.5);
             }
             100% {
-              text-shadow: 0 0 10px #2aff6d, 0 0 20px #2aff6d, 0 0 30px #2aff6d,
-                0 0 40px #2aff6d;
+              text-shadow: 0 0 10px rgba(42, 255, 109, 0.9),
+                0 0 20px rgba(42, 255, 109, 0.7);
             }
           }
 
@@ -273,8 +275,8 @@ const LokiHackathon = () => {
           }
 
           .neon-border {
-            box-shadow: 0 0 20px rgba(42, 255, 109, 0.3),
-              inset 0 0 20px rgba(42, 255, 109, 0.1);
+            box-shadow: 0 0 15px rgba(42, 255, 109, 0.2),
+              inset 0 0 15px rgba(42, 255, 109, 0.1);
           }
 
           .parallax-layer {
@@ -284,11 +286,11 @@ const LokiHackathon = () => {
           .tva-badge {
             background: linear-gradient(145deg, #133523, #0b2a1c);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3),
-              inset 0 0 15px rgba(42, 255, 109, 0.3);
+              inset 0 0 10px rgba(42, 255, 109, 0.3);
           }
 
           .timeline-icon {
-            filter: drop-shadow(0 0 10px rgba(42, 255, 109, 0.7));
+            filter: drop-shadow(0 0 8px rgba(42, 255, 109, 0.5));
           }
 
           .prize-card {
