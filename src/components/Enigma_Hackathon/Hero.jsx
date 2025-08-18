@@ -28,7 +28,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         {/* Matrix-like falling elements */}
         <div
-          className="absolute top-0 left-1/4 w-px h-screen bg-gradient-to-b from-[#2aff6d] to-transparent animate-matrix opacity-30"
+          className="absolute top-0 left-1/4 w-px h-screen bg-gradient-to-b from-[#ff9900] to-transparent animate-matrix opacity-30"
           style={{ animationDelay: "0s" }}
         ></div>
         <div
@@ -89,11 +89,11 @@ const Hero = () => {
               <div
                 key={index}
                 className="glass-effect rounded-2xl p-8 transform hover:scale-110 transition-all duration-500 neon-border group"
-                style={{ borderColor: index % 2 === 0 ? "#2aff6d" : "#ff9900" }}
+                style={{ borderColor: index % 2 === 0 ? "#ff9900" : "#2aff6d" }}
               >
                 <div
                   className={`text-5xl font-bold mb-4 group-hover:scale-110 transition-transform duration-300`}
-                  style={{ color: index % 2 === 0 ? "#2aff6d" : "#ff9900" }}
+                  style={{ color: index % 2 === 0 ? "#ff9900" : "#2aff6d" }}
                 >
                   {stat.value}
                 </div>

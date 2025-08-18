@@ -25,7 +25,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-[#2aff6d] to-[#c6a567] rounded-lg flex items-center justify-center neon-border">
+            <div className="w-10 h-10 bg-gradient-to-br from-[#2aff6d] to-[#ff9900] rounded-lg flex items-center justify-center neon-border">
               <span className="text-[#0b2a1c] font-cinzel font-bold text-xl">
                 L
               </span>
@@ -44,7 +44,7 @@ const Navbar = () => {
                 className="hover:text-[#ff9900] transition-all duration-300 font-medium relative group"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#2aff6d] group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ff9900] group-hover:w-full transition-all duration-300"></span>
               </button>
             ))}
             <button className="bg-gradient-to-r from-[#8b5a2b] to-[#ffcc33] hover:from-[#ffcc33] hover:to-[#8b5a2b] text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 neon-border">
