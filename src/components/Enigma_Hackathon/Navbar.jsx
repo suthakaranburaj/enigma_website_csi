@@ -51,7 +51,7 @@ const Navbar = () => {
             <button className="bg-gradient-to-r from-[#8b5a2b] to-[#ffcc33] hover:from-[#ffcc33] hover:to-[#8b5a2b] text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 neon-border">
               Register Now
             </button>
-            <img className="h-40 w-40" src="/SIES_GST_WHITE_LOGO.png" alt="" />
+            {/* <img className="h-40 w-40" src="/SIES_GST_WHITE_LOGO.png" alt="" /> */}
           </div>
 
           {/* Mobile Menu Button */}
