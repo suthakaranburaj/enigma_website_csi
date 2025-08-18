@@ -1,4 +1,5 @@
-  const Footer = () => {
+"use client"
+const Footer = () => {
     const links = [
       { label: "Discord", href: "#" },
       { label: "Twitter", href: "#" },

@@ -1,3 +1,4 @@
+"use client"
 const TimelineItem = ({ event }) => {
   const { position, title, date, description, icon, color } = event;
 
