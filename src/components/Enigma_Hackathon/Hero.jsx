@@ -41,7 +41,7 @@ const Hero = () => {
         ></div>
 
         {/* Floating particles */}
-        <div className="absolute top-20 left-10 w-3 h-3 bg-[#2aff6d] rounded-full animate-pulse-slow shadow-lg shadow-[#2aff6d]/50"></div>
+        <div className="absolute top-20 left-10 w-3 h-3 bg-[#ff9900] rounded-full animate-pulse-slow shadow-lg shadow-[#ff9900]/50"></div>
         <div className="absolute top-40 right-20 w-4 h-4 bg-[#c6a567] rounded-full animate-pulse opacity-60 shadow-lg shadow-[#c6a567]/50"></div>
         <div className="absolute bottom-40 left-1/4 w-2 h-2 bg-[#3399ff] rounded-full animate-ping shadow-lg shadow-[#3399ff]/50"></div>
         <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-[#ff3333] rounded-full animate-pulse-slow opacity-40 shadow-lg shadow-[#ff3333]/50"></div>

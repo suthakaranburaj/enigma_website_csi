@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #ffffff; /* Retain white background */
   --foreground: #171717;
+  --primary-green: #2aff6d;
+  --secondary-orange: #ff9900; /* New orange color */
 }
 
 @theme inline {
