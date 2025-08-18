@@ -64,7 +64,7 @@ const Hero = () => {
         <div className="absolute bottom-60 right-1/4 w-2 h-2 bg-[#2aff6d] rounded-full animate-ping opacity-50 shadow-lg shadow-[#2aff6d]/50"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-60 sm:pt-32 pb-20">
+      <div className="relative z-10 max-w-8xl mx-auto lg:ml-10 px-0 sm:px-6 lg:px-0 lg:pl-8 pt-60 sm:pt-32 pb-20">
         <div className="flex flex-col lg:flex-row items-center">
           {/* Left Content */}
           <div className="lg:w-1/2 text-center lg:text-left mb-16 lg:mb-0">
@@ -158,7 +158,7 @@ const Hero = () => {
 
           {/* Right Image */}
           <div className="lg:w-1/2 flex justify-center">
-            <div className="aspect-square w-full rounded-xl overflow-hidden flex items-center justify-center">
+            <div className="aspect-square w-full rounded-xl overflow-hidden flex items-center justify-end">
               {/* Loki Image */}
               <img
                 src="/lok.png"
