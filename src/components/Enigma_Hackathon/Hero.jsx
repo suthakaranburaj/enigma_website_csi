@@ -89,21 +89,15 @@ const Hero = () => {
               <div
                 key={index}
                 className="glass-effect rounded-2xl p-8 transform hover:scale-110 transition-all duration-500 neon-border group"
-                style={{ borderColor: stat.color }}
+                style={{ borderColor: index % 2 === 0 ? "#2aff6d" : "#ff9900" }}
               >
                 <div
                   className={`text-5xl font-bold mb-4 group-hover:scale-110 transition-transform duration-300`}
-                  style={{ color: stat.color }}
+                  style={{ color: index % 2 === 0 ? "#2aff6d" : "#ff9900" }}
                 >
                   {stat.value}
                 </div>
                 <div className="text-[#b6c8b8] text-lg">{stat.label}</div>
-                <div
-                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  style={{
-                    background: `linear-gradient(to top, ${stat.color}10, transparent)`,
-                  }}
-                ></div>
               </div>
             ))}
           </div>
