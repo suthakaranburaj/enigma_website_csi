@@ -19,7 +19,7 @@ const Hero = () => {
 
     // Countdown calculation
     const calculateTimeLeft = () => {
-      const hackathonDate = new Date("2025-10-15T00:00:00");
+      const hackathonDate = new Date("2025-09-20T00:00:00");
       const now = new Date();
       const difference = hackathonDate - now;
 
