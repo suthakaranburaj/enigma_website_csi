@@ -12,11 +12,11 @@ const Layout = ({ children }) => {
         className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('/loki.jpg')`,
-          filter: "brightness(0.99) contrast(1.1)",
+          filter: "brightness(1) contrast(1.3)",
         }}
       />
 
-      <MatrixRain canvasRef={canvasRef} />
+      {/* <MatrixRain canvasRef={canvasRef} /> */}
 
       {/* Reduced opacity overlay */}
       <div className="fixed inset-0 z-1 bg-gradient-to-b from-[#0b2a1c]/70 via-[#0b2a1c]/50 to-[#0b2a1c]/70" />
