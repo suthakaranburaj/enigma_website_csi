@@ -145,12 +145,12 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-[#ffcc33] to-[#8b5a2b] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </button>
               <button className="group relative border-2 border-[#2aff6d] text-[#2aff6d] hover:bg-[#2aff6d] hover:text-[#0b2a1c] px-10 py-4 rounded-xl font-bold text-xl transition-all duration-500 transform hover:scale-110 neon-border overflow-hidden">
-                <button
+                <span
                   onClick={() => scrollToSection("timeline")}
                   className="relative z-10 cursor-pointer"
                 >
                   View Timeline
-                </button>
+                </span>
                 <div className="absolute inset-0 bg-[#2aff6d] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               </button>
             </div>
