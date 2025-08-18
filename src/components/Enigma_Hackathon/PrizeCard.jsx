@@ -3,17 +3,17 @@ const PrizeCard = ({ prize }) => {
   const { position, title, value, color, icon, items } = prize;
 
   return (
-    <div className="relative group prize-card">
+    <div className="relative group prize-card min-w-[300px]">
       <div className="prize-card-inner glass-effect-strong rounded-3xl p-10 text-center neon-border">
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <div
+          {/* <div
             className="text-[#0b2a1c] px-6 py-2 rounded-full font-bold text-sm animate-pulse"
             style={{
               background: `linear-gradient(to right, ${color}99, ${color}60)`,
             }}
           >
             {position}
-          </div>
+          </div> */}
         </div>
         <div className="mt-8 mb-8">
           <div
@@ -34,7 +34,7 @@ const PrizeCard = ({ prize }) => {
             {title}
           </h4>
         </div>
-        <ul className="text-[#b6c8b8] space-y-3 text-left">
+        {/* <ul className="text-[#b6c8b8] space-y-3 text-left">
           {items.map((item, index) => (
             <li key={index} className="flex items-center space-x-3">
               <div
@@ -44,7 +44,7 @@ const PrizeCard = ({ prize }) => {
               <span>{item}</span>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
     </div>
   );

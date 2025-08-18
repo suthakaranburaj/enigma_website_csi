@@ -64,7 +64,7 @@ const Hero = () => {
         <div className="absolute bottom-60 right-1/4 w-2 h-2 bg-[#2aff6d] rounded-full animate-ping opacity-50 shadow-lg shadow-[#2aff6d]/50"></div>
       </div>
 
-      <div className="relative z-10 max-w-8xl mx-auto lg:ml-10 px-0 sm:px-6 lg:px-0 lg:pl-8 pt-60 sm:pt-32 pb-20">
+      <div className="relative z-10 max-w-8xl mx-auto lg:ml-10 px-1 sm:px-6 lg:px-0 lg:pl-8 pt-60 sm:pt-32 pb-20">
         <div className="flex flex-col lg:flex-row items-center">
           {/* Left Content */}
           <div className="lg:w-1/2 text-center lg:text-left mb-16 lg:mb-0">
@@ -72,7 +72,7 @@ const Hero = () => {
             <div className="mb-12">
               <h1 className="font-cinzel hero-title font-bold mb-6">
                 <span className="text-gradient-glow animate-glow block">
-                  LOKI
+                  Enigma 4.0
                 </span>
               </h1>
               <h2 className="font-cinzel text-4xl md:text-6xl font-semibold text-[#f27900] mb-8 animate-pulse">

@@ -25,13 +25,14 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-[#2aff6d] to-[#ff9900] rounded-lg flex items-center justify-center neon-border">
-              <span className="text-[#0b2a1c] font-cinzel font-bold text-xl">
+            <div className="w-24 h-24 bg-white/0 rounded-lg flex items-center justify-center">
+              {/* <span className="text-[#0b2a1c] font-cinzel font-bold text-xl">
                 L
-              </span>
+              </span> */}
+              <img src="/csilogo.png" alt="" />
             </div>
             <span className="font-cinzel font-bold text-xl text-gradient animate-glow">
-              LOKI HACKATHON
+              Enigma 4.0
             </span>
           </div>
 
@@ -50,6 +51,7 @@ const Navbar = () => {
             <button className="bg-gradient-to-r from-[#8b5a2b] to-[#ffcc33] hover:from-[#ffcc33] hover:to-[#8b5a2b] text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 neon-border">
               Register Now
             </button>
+            <img className="h-40 w-40" src="/SIES_GST_WHITE_LOGO.png" alt="" />
           </div>
 
           {/* Mobile Menu Button */}

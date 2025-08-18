@@ -4,7 +4,34 @@ const Footer = () => {
     { label: "Discord", href: "#" },
     { label: "Twitter", href: "#" },
     { label: "GitHub", href: "#" },
-    { label: "Contact", href: "#" },
+  ];
+
+  // Contact details data
+  const contacts = [
+    {
+      name: "Kanishka Jadhav",
+      role: "Event Lead - Enigma 4.0",
+      phone: "9082885751",
+      email: "kanishkaj25@gmail.com",
+    },
+    {
+      name: "Samiksha Dhole",
+      role: "Event Lead - Enigma 4.0",
+      phone: "7977999825",
+      email: "",
+    },
+    {
+      name: "Dev Sharma",
+      role: "Treasurer - CSI",
+      phone: "9322734121",
+      email: "",
+    },
+    {
+      name: "Sahil Khairnar",
+      role: "Management Lead - Enigma 4.0",
+      phone: "9370070202",
+      email: "sahilk2303@gmail.com",
+    },
   ];
 
   return (
@@ -14,7 +41,7 @@ const Footer = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="mb-12">
           <div className="font-cinzel text-4xl font-bold text-gradient mb-6 animate-glow">
-            LOKI HACKATHON
+            Enigma 4.0 Hackathon
           </div>
           <p className="text-[#b6c8b8] italic text-xl">
             "Glorious Purpose Awaits"
@@ -33,6 +60,32 @@ const Footer = () => {
           ))}
         </div>
 
+        {/* Contact Details Section */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-bold text-[#ff9900] mb-8">
+            Contact Team
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {contacts.map((contact, index) => (
+              <div
+                key={index}
+                className="neon-border bg-[#0b2a1c]/50 backdrop-blur-sm border border-[#133523] rounded-lg p-4 duration-500 transition-all scale-95 hover:scale-100"
+              >
+                <h4 className="text-lg font-semibold text-[#ff9900]">
+                  {contact.name}
+                </h4>
+                <p className="text-[#b6c8b8] text-sm mb-1">{contact.role}</p>
+                <p className="text-[#b6c8b8] text-sm">{contact.phone}</p>
+                {contact.email && (
+                  <p className="text-[#b6c8b8] text-sm truncate">
+                    {contact.email}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="mt-8">
           <a
             href="#register"
@@ -44,7 +97,8 @@ const Footer = () => {
 
         <div className="border-t border-[#133523] pt-8">
           <p className="text-[#b6c8b8]">
-            © 2025 Loki Hackathon. All timelines reserved. | TVA Approved Event
+            © 2025 Enigma 4.0 Hackathon. All timelines reserved. | TVA Approved
+            Event
           </p>
         </div>
       </div>

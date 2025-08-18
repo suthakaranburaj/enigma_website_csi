@@ -43,9 +43,16 @@ const LokiStyles = () => (
     .glass-effect-strong {
       background: rgba(11, 42, 28, 0.7);
       backdrop-filter: blur(0px);
-      border: 1px solid rgba(42, 255, 109, 0.3);
+      border: 1px solid rgba(255, 221, 102, 0.3);
       box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
     }
+
+    // .glass-effect-strong {
+    //   background: rgba(255, 204, 0, 0.1); /* Medium yellow with 70% opacity */
+    //   backdrop-filter: blur(0px);
+    //   border: 1px solid rgba(255, 221, 102, 0.5); /* Light golden border */
+    //   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    // }
 
     .tva-pattern {
       background-image: radial-gradient(
@@ -73,7 +80,7 @@ const LokiStyles = () => (
     }
 
     .neon-border {
-      box-shadow: 0 0 15px rgba(42, 255, 109, 0.2),
+      box-shadow: 0 0 15px rgba(255, 221, 102, 0.5),
         inset 0 0 15px rgba(42, 255, 109, 0.1);
     }
 

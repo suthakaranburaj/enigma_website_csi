@@ -71,7 +71,7 @@ const Timeline = () => {
           ></path>
         </svg>
       ),
-      color: "#3399ff",
+      color: "#f27900",
     },
     {
       id: "submissions",

@@ -42,7 +42,7 @@ const About = () => {
     },
     {
       title: "Networking",
-      color: "#3399ff",
+      color: "#f27900 ",
       description: "Connect with industry leaders and fellow developers",
     },
   ];
