@@ -45,6 +45,13 @@ const Hero = () => {
     };
   }, []);
 
+    const scrollToSection = (sectionId) => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
   return (
     <section id="home" className="min-h-screen relative overflow-hidden">
       {/* Dynamic Particles */}
@@ -134,11 +141,16 @@ const Hero = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center">
               <button className="group relative overflow-hidden bg-gradient-to-r from-[#8b5a2b] to-[#ffcc33] hover:from-[#ffcc33] hover:to-[#8b5a2b] text-white px-10 py-4 rounded-xl font-bold text-xl transition-all duration-500 transform hover:scale-110 neon-border">
-                <span className="relative z-10">Register</span>
+                <span className="relative z-10 cursor-pointer">Register</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#ffcc33] to-[#8b5a2b] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </button>
               <button className="group relative border-2 border-[#2aff6d] text-[#2aff6d] hover:bg-[#2aff6d] hover:text-[#0b2a1c] px-10 py-4 rounded-xl font-bold text-xl transition-all duration-500 transform hover:scale-110 neon-border overflow-hidden">
-                <span className="relative z-10">View Timeline</span>
+                <button
+                  onClick={() => scrollToSection("timeline")}
+                  className="relative z-10 cursor-pointer"
+                >
+                  View Timeline
+                </button>
                 <div className="absolute inset-0 bg-[#2aff6d] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               </button>
             </div>
