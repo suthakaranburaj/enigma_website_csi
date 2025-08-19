@@ -125,7 +125,7 @@ const PrizeHighlight = () => {
         <div className="w-96 h-96 flex items-center justify-center relative">
           <div className="absolute w-full h-full bg-green-500/50 rounded-full blur-3xl animate-pulse"></div>
           <Image
-            src="/trophy.png" // <-- replace with your trophy image path
+            src="/trophy.png"
             alt="Trophy"
             width={600}
             height={600}
