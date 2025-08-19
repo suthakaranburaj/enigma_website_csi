@@ -18,13 +18,13 @@ const Footer = () => {
       name: "Samiksha Dhole",
       role: "Event Lead - Enigma 4.0",
       phone: "7977999825",
-      email: "",
+      email: "sameekshadhole06@gmail.com",
     },
     {
       name: "Dev Sharma",
       role: "Treasurer - CSI",
       phone: "9322734121",
-      email: "",
+      email: "devs.rajsharma@gmail.com",
     },
     {
       name: "Sahil Khairnar",
