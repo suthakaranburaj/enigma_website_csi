@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 const Footer = () => {
   const links = [
     { label: "Discord", href: "#" },
@@ -38,7 +39,12 @@ const Footer = () => {
     <footer className="relative py-16">
       <div className="absolute inset-0 bg-gradient-to-t from-[#0b2a1c] to-transparent"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9 }}
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+      >
         <div className="mb-12">
           <div
             style={{ fontFamily: "Mestizo" }}
@@ -104,7 +110,7 @@ const Footer = () => {
             Event
           </p>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 };

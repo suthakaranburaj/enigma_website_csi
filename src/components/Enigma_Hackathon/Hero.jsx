@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-
+import { motion } from "framer-motion";
 const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
 
@@ -64,7 +64,12 @@ const Hero = () => {
         <div className="absolute bottom-60 right-1/4 w-2 h-2 bg-[#2aff6d] rounded-full animate-ping opacity-50 shadow-lg shadow-[#2aff6d]/50"></div>
       </div>
 
-      <div className="relative z-10 max-w-8xl mx-auto lg:ml-10 px-1 sm:px-6 lg:px-0 lg:pl-8 pt-60 sm:pt-32 pb-20">
+      <motion.div
+        initial={{ opacity: 0, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="relative z-10 max-w-8xl mx-auto lg:ml-10 px-1 sm:px-6 lg:px-0 lg:pl-8 pt-60 sm:pt-32 pb-20"
+      >
         <div className="flex flex-col lg:flex-row items-center justify-center ">
           {/* Left Content */}
           <div className="lg:w-1/2 text-center lg:text-left mb-16 lg:mb-0">
@@ -174,7 +179,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Floating Elements */}
       <div

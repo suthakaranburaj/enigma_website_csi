@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 const TimelineItem = ({ event }) => {
   const { position, title, date, description, icon, color } = event;
 
@@ -6,7 +7,12 @@ const TimelineItem = ({ event }) => {
     <div className="flex items-center relative">
       {position === "left" ? (
         <>
-          <div className="flex-1 pr-8 text-right">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex-1 pr-8 text-right"
+          >
             <div
               className="glass-effect-strong rounded-2xl p-4 sm:p-8 neon-border transform hover:scale-102 transition-all duration-500"
               style={{
@@ -25,7 +31,7 @@ const TimelineItem = ({ event }) => {
               <p className="text-[#b6c8b8] mb-2">{date}</p>
               <p className="text-sm text-[#b6c8b8]/80">{description}</p>
             </div>
-          </div>
+          </motion.div>
           <div
             className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-[#0b2a1c] rounded-full flex items-center justify-center neon-border"
             style={
@@ -63,7 +69,12 @@ const TimelineItem = ({ event }) => {
           >
             {icon}
           </div>
-          <div className="flex-1 pl-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex-1 pl-8"
+          >
             <div
               className="glass-effect-strong rounded-2xl p-4 sm:p-8  neon-border transform hover:scale-102 transition-all duration-500"
               style={{
@@ -82,7 +93,7 @@ const TimelineItem = ({ event }) => {
               <p className="text-[#b6c8b8] mb-2">{date}</p>
               <p className="text-sm text-[#b6c8b8]/80">{description}</p>
             </div>
-          </div>
+          </motion.div>
         </>
       )}
     </div>

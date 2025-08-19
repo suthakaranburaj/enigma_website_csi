@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-
+import { motion } from "framer-motion";
 const About = () => {
   const features = [
     {
@@ -58,7 +58,12 @@ const About = () => {
     <section id="about" className="py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#133523]/50 to-transparent"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9 }}
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="font-cinzel text-5xl md:text-7xl font-bold text-gradient mb-8 animate-glow">
@@ -177,7 +182,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Decorative Elements */}
       <div className="absolute top-10 right-10 w-40 h-40 border-2 border-[#2aff6d]/20 rotate-45 animate-pulse-slow neon-border"></div>

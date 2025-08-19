@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
 import TimelineItem from "./TimelineItem";
-
+import { motion } from "framer-motion";
 const Timeline = () => {
   const timelineEvents = [
     {
@@ -125,7 +125,12 @@ const Timeline = () => {
     <section id="timeline" className="py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0b2a1c]/80 to-transparent"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
         <div className="text-center mb-20">
           <h2 className="font-cinzel text-5xl md:text-7xl font-bold text-gradient mb-8 animate-glow">
             Sacred Timeline
@@ -146,7 +151,7 @@ const Timeline = () => {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
