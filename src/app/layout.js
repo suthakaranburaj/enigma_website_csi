@@ -11,10 +11,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// export const metadata = {
+//   title: "Enigma 4.0",
+//   description: "The ultimate hackathon experience",
+// };
+
+import { SEO } from "./seo";
+
 export const metadata = {
-  title: "Enigma 4.0",
-  description: "The ultimate hackathon experience",
+  title: SEO.title,
+  description: SEO.description,
+  keywords: SEO.keywords.join(", "),
+  authors: [{ name: SEO.author }],
+  openGraph: SEO.openGraph,
+  twitter: SEO.twitter,
 };
+
 
 export default function RootLayout({ children }) {
   return (
