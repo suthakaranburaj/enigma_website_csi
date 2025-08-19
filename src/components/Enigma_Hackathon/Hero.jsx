@@ -110,7 +110,7 @@ const Hero = () => {
             <div className="mb-16 max-w-2xl mx-auto lg:mx-0">
               <div className="grid grid-cols-4 gap-4">
                 <div className="glass-effect rounded-4xl p-4 neon-border">
-                  <div className="text-3xl md:text-5xl font-bold text-[#ff6600] mb-2">
+                  <div className="text-3xl md:text-5xl font-bold text-[#2aff6d] mb-2">
                     {days.toString().padStart(2, "0")}
                   </div>
                   <div className="text-[#b6c8b8] text-sm md:text-base">
@@ -118,7 +118,7 @@ const Hero = () => {
                   </div>
                 </div>
                 <div className="glass-effect rounded-4xl p-4 neon-border">
-                  <div className="text-3xl md:text-5xl font-bold text-[#ff6600] mb-2">
+                  <div className="text-3xl md:text-5xl font-bold text-[#2aff6d] mb-2">
                     {hours.toString().padStart(2, "0")}
                   </div>
                   <div className="text-[#b6c8b8] text-sm md:text-base">
@@ -126,7 +126,7 @@ const Hero = () => {
                   </div>
                 </div>
                 <div className="glass-effect rounded-4xl p-4 neon-border">
-                  <div className="text-3xl md:text-5xl font-bold text-[#ff6600] mb-2">
+                  <div className="text-3xl md:text-5xl font-bold text-[#2aff6d] mb-2">
                     {minutes.toString().padStart(2, "0")}
                   </div>
                   <div className="text-[#b6c8b8] text-sm md:text-base">
@@ -134,7 +134,7 @@ const Hero = () => {
                   </div>
                 </div>
                 <div className="glass-effect rounded-4xl p-4 neon-border">
-                  <div className="text-3xl md:text-5xl font-bold text-[#ff6600] mb-2">
+                  <div className="text-3xl md:text-5xl font-bold text-[#2aff6d] mb-2">
                     {seconds.toString().padStart(2, "0")}
                   </div>
                   <div className="text-[#b6c8b8] text-sm md:text-base">
