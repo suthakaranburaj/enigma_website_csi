@@ -6,10 +6,12 @@ const PrizeHighlight = () => {
   const [confetti, setConfetti] = useState(false);
 
   useEffect(() => {
-    // Trigger confetti animation on component mount
-    setConfetti(true);
-    const timer = setTimeout(() => setConfetti(false), 3000);
-    return () => clearTimeout(timer);
+    const interval = setInterval(() => {
+      setConfetti(false); // reset
+      setTimeout(() => setConfetti(true), 100); // restart after small delay
+    }, 5000); // every 5 sec new cycle
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
