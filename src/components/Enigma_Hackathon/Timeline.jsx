@@ -8,7 +8,7 @@ const Timeline = () => {
       id: "registration",
       position: "left",
       title: "Registration Opens",
-      date: "December 15, 2024",
+      date: "August 20, 2025",
       description: "Secure your spot in the multiverse",
       icon: (
         <svg
@@ -30,8 +30,8 @@ const Timeline = () => {
     {
       id: "kickoff",
       position: "right",
-      title: "Hackathon Begins",
-      date: "January 10, 2025 - 6:00 PM",
+      title: "Shortlisted Teams Announced",
+      date: "September 15, 2025 - 6:00 PM",
       description: "The chaos begins, variants assemble",
       icon: (
         <svg
@@ -51,10 +51,10 @@ const Timeline = () => {
       color: "#c6a567",
     },
     {
-      id: "checkpoint",
+      id: "Hackathon_Begins",
       position: "left",
-      title: "Midnight Checkpoint",
-      date: "January 11, 2025 - 12:00 AM",
+      title: "Hackathon Begins",
+      date: "September 20, 2025 - 8:00 AM",
       description: "Progress review and mentorship",
       icon: (
         <svg
@@ -77,7 +77,7 @@ const Timeline = () => {
       id: "submissions",
       position: "right",
       title: "Submissions Close",
-      date: "January 12, 2025 - 6:00 PM",
+      date: "September 20, 2025 - 5:00 PM",
       description: "Time runs out, destiny awaits",
       icon: (
         <svg
@@ -100,7 +100,7 @@ const Timeline = () => {
       id: "results",
       position: "left",
       title: "Glorious Purpose Achieved",
-      date: "January 13, 2025 - 8:00 PM",
+      date: "September 20, 2025 - 6:00 PM",
       description: "Winners announced, legends born",
       icon: (
         <svg
