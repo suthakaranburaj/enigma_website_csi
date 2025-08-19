@@ -98,7 +98,7 @@ const Footer = () => {
         <div className="mt-8">
           <a
             href="#register"
-            className="bg-[#ff9900] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-102"
+            className="bg-[#ff9900] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-102 cursor-pointer"
           >
             Register Now
           </a>

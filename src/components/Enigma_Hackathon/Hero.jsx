@@ -9,41 +9,51 @@ const Hero = () => {
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
+  const [dayProgress, setDayProgress] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
 
-    window.addEventListener("scroll", handleScroll);
+useEffect(() => {
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
 
-    // Countdown calculation
-    const calculateTimeLeft = () => {
-      const hackathonDate = new Date("2025-09-20T00:00:00");
-      const now = new Date();
-      const difference = hackathonDate - now;
+  window.addEventListener("scroll", handleScroll);
 
-      if (difference > 0) {
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((difference / 1000 / 60) % 60);
-        const seconds = Math.floor((difference / 1000) % 60);
+  const startDate = new Date("2025-08-20T00:00:00");
+  const endDate = new Date("2025-09-20T00:00:00");
 
-        setDays(days);
-        setHours(hours);
-        setMinutes(minutes);
-        setSeconds(seconds);
-      }
-    };
+  const calculateTimeLeft = () => {
+    const now = new Date();
+    const difference = endDate - now;
 
-    calculateTimeLeft();
-    const timer = setInterval(calculateTimeLeft, 1000);
+    if (difference > 0) {
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((difference / 1000 / 60) % 60);
+      const seconds = Math.floor((difference / 1000) % 60);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      clearInterval(timer);
-    };
-  }, []);
+      setDays(days);
+      setHours(hours);
+      setMinutes(minutes);
+      setSeconds(seconds);
+    }
+
+    // ✅ Progress calculation
+    const totalDuration = endDate - startDate;
+    const elapsed = now - startDate;
+    const progress = Math.min((elapsed / totalDuration) * 100, 100); // cap at 100%
+    setDayProgress(progress);
+  };
+
+  calculateTimeLeft();
+  const timer = setInterval(calculateTimeLeft, 1000);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+    clearInterval(timer);
+  };
+}, []);
+
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -51,6 +61,15 @@ const Hero = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  // const [totalDays, setTotalDays] = useState(0);
+
+  // useEffect(() => {
+  //   const hackathonDate = new Date("2025-08-20T00:00:00");
+  //   const now = new Date("2025-08-02T00:00:00");
+  //   const total = Math.floor((hackathonDate - now) / (1000 * 60 * 60 * 24));
+  //   setTotalDays(total);
+  // }, []);
 
   return (
     <section id="home" className="min-h-screen relative overflow-hidden">
@@ -114,35 +133,60 @@ const Hero = () => {
             {/* Countdown Timer */}
             <div className="mb-16 max-w-2xl mx-auto lg:mx-0">
               <div className="grid grid-cols-4 gap-4">
-                <div className="glass-effect rounded-4xl p-4 neon-border">
-                  <div className="text-3xl md:text-5xl font-bold text-[#2aff6d] mb-2">
+                {/* Days */}
+                <div className="relative glass-effect rounded-4xl p-4 neon-border overflow-hidden">
+                  <div
+                    className="absolute bottom-0 left-0 w-full bg-[#2aff6d]/10 transition-all duration-1000"
+                    style={{
+                      height: `${dayProgress}%`,
+                    }}
+                  ></div>
+                  <div className="relative text-3xl md:text-5xl font-bold text-[rgb(42,255,109)] mb-2">
                     {days.toString().padStart(2, "0")}
                   </div>
-                  <div className="text-[#b6c8b8] text-sm md:text-base">
+                  <div className="relative text-[#b6c8b8] text-sm md:text-base">
                     Days
                   </div>
                 </div>
-                <div className="glass-effect rounded-4xl p-4 neon-border">
-                  <div className="text-3xl md:text-5xl font-bold text-[#2aff6d] mb-2">
+
+                {/* Hours */}
+                <div className="relative glass-effect rounded-4xl p-4 neon-border overflow-hidden">
+                  <div
+                    className="absolute bottom-0 left-0 w-full bg-[#2aff6d]/10 transition-all duration-1000"
+                    style={{ height: `${((24 - hours) / 24) * 100}%` }}
+                  ></div>
+                  <div className="relative text-3xl md:text-5xl font-bold text-[#2aff6d] mb-2">
                     {hours.toString().padStart(2, "0")}
                   </div>
-                  <div className="text-[#b6c8b8] text-sm md:text-base">
+                  <div className="relative text-[#b6c8b8] text-sm md:text-base">
                     Hours
                   </div>
                 </div>
-                <div className="glass-effect rounded-4xl p-4 neon-border">
-                  <div className="text-3xl md:text-5xl font-bold text-[#2aff6d] mb-2">
+
+                {/* Minutes */}
+                <div className="relative glass-effect rounded-4xl p-4 neon-border overflow-hidden">
+                  <div
+                    className="absolute bottom-0 left-0 w-full bg-[#2aff6d]/10 transition-all duration-1000"
+                    style={{ height: `${((60 - minutes) / 60) * 100}%` }}
+                  ></div>
+                  <div className="relative text-3xl md:text-5xl font-bold text-[#2aff6d] mb-2">
                     {minutes.toString().padStart(2, "0")}
                   </div>
-                  <div className="text-[#b6c8b8] text-sm md:text-base">
+                  <div className="relative text-[#b6c8b8] text-sm md:text-base">
                     Minutes
                   </div>
                 </div>
-                <div className="glass-effect rounded-4xl p-4 neon-border">
-                  <div className="text-3xl md:text-5xl font-bold text-[#2aff6d] mb-2">
+
+                {/* Seconds */}
+                <div className="relative glass-effect rounded-4xl p-4 neon-border overflow-hidden">
+                  <div
+                    className="absolute bottom-0 left-0 w-full bg-[#2aff6d]/10 transition-all duration-1000"
+                    style={{ height: `${((60 - seconds) / 60) * 100}%` }}
+                  ></div>
+                  <div className="relative text-3xl md:text-5xl font-bold text-[#2aff6d] mb-2">
                     {seconds.toString().padStart(2, "0")}
                   </div>
-                  <div className="text-[#b6c8b8] text-sm md:text-base">
+                  <div className="relative text-[#b6c8b8] text-sm md:text-base">
                     Seconds
                   </div>
                 </div>
