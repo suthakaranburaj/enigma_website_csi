@@ -40,8 +40,11 @@ const Footer = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="mb-12">
-          <div className="font-cinzel text-4xl font-bold text-gradient mb-6 animate-glow">
-            Enigma 4.0 Hackathon
+          <div
+            style={{ fontFamily: "Mestizo" }}
+            className="text-white text-4xl mb-6 animate-glow"
+          >
+            Enigma 4.0
           </div>
           <p className="text-[#b6c8b8] italic text-xl">
             "Glorious Purpose Awaits"
@@ -53,7 +56,7 @@ const Footer = () => {
             <a
               key={index}
               href={link.href}
-              className="text-[#b6c8b8] hover:text-[#ff9900] transition-all duration-300 transform hover:scale-110 text-lg"
+              className="text-[#b6c8b8] hover:text-[#ff9900] transition-all duration-300 transform hover:scale-102 text-lg"
             >
               {link.label}
             </a>
@@ -89,7 +92,7 @@ const Footer = () => {
         <div className="mt-8">
           <a
             href="#register"
-            className="bg-[#ff9900] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
+            className="bg-[#ff9900] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-102"
           >
             Register Now
           </a>

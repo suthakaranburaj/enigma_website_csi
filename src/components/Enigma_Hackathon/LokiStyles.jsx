@@ -19,18 +19,18 @@ const LokiStyles = () => (
     }
 
     .text-gradient {
-      background: linear-gradient(45deg, #2aff6d, #c6a567, #ffcc33);
+      background: linear-gradient(45deg, #2aff6d, #2aff6d, #2aff6d);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
     .text-gradient-glow {
-      background: linear-gradient(45deg, #2aff6d, #c6a567, #ffcc33);
+      background: linear-gradient(45deg, #ffffff, #ffffff, #ffffff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      filter: drop-shadow(0 0 15px rgba(42, 255, 109, 0.5));
+      filter: drop-shadow(0 0 15px rgba(42, 255, 109, 0.1));
     }
 
     .glass-effect {
@@ -41,7 +41,7 @@ const LokiStyles = () => (
     }
 
     .glass-effect-strong {
-      background: rgba(11, 42, 28, 0.7);
+      background: rgba(11, 42, 28, 0.3);
       backdrop-filter: blur(0px);
       border: 1px solid rgba(255, 221, 102, 0.3);
       box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
@@ -80,8 +80,8 @@ const LokiStyles = () => (
     }
 
     .neon-border {
-      box-shadow: 0 0 15px rgba(255, 221, 102, 0.5),
-        inset 0 0 15px rgba(42, 255, 109, 0.1);
+      box-shadow: 0 0 2px rgba(255, 221, 102, 0.5),
+        inset 0 0 2px rgba(42, 255, 109, 0.1);
     }
 
     .tva-badge {
@@ -183,7 +183,7 @@ const LokiStyles = () => (
       animation: floatReverse 8s ease-in-out infinite;
     }
     .animate-glow {
-      animation: glow 2s ease-in-out infinite alternate;
+      // animation: glow 2s ease-in-out infinite alternate;
     }
     .animate-shimmer {
       animation: shimmer 3s linear infinite;
@@ -199,7 +199,7 @@ const LokiStyles = () => (
     }
 
     .hero-title {
-      font-size: clamp(3rem, 15vw, 8rem);
+      font-size: clamp(3rem, 20vw, 8rem);
       line-height: 0.9;
     }
   `}</style>

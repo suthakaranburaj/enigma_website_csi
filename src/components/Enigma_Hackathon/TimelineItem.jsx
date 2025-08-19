@@ -1,4 +1,4 @@
-"use client"
+"use client";
 const TimelineItem = ({ event }) => {
   const { position, title, date, description, icon, color } = event;
 
@@ -8,14 +8,14 @@ const TimelineItem = ({ event }) => {
         <>
           <div className="flex-1 pr-8 text-right">
             <div
-              className="glass-effect-strong rounded-2xl p-4 sm:p-8 neon-border transform hover:scale-105 transition-all duration-500"
+              className="glass-effect-strong rounded-2xl p-4 sm:p-8 neon-border transform hover:scale-102 transition-all duration-500"
               style={{
                 borderColor:
                   color === "gradient" ? "transparent" : `${color}30`,
               }}
             >
               <h3
-                className="text-2xl font-bold mb-4 animate-glow"
+                className="text-2xl font-bold mb-4"
                 style={{
                   color: color === "gradient" ? "var(--gradient)" : color,
                 }}
@@ -65,14 +65,14 @@ const TimelineItem = ({ event }) => {
           </div>
           <div className="flex-1 pl-8">
             <div
-              className="glass-effect-strong rounded-2xl p-4 sm:p-8  neon-border transform hover:scale-105 transition-all duration-500"
+              className="glass-effect-strong rounded-2xl p-4 sm:p-8  neon-border transform hover:scale-102 transition-all duration-500"
               style={{
                 borderColor:
                   color === "gradient" ? "transparent" : `${color}30`,
               }}
             >
               <h3
-                className="text-2xl font-bold mb-4 animate-glow"
+                className="text-2xl font-bold mb-4"
                 style={{
                   color: color === "gradient" ? "var(--gradient)" : color,
                 }}

@@ -31,7 +31,10 @@ const Navbar = () => {
               </span> */}
               <img src="/csilogo.png" alt="" />
             </div>
-            <span className="font-cinzel font-bold text-xl text-gradient animate-glow">
+            <span
+              style={{ fontFamily: "Mestizo" }}
+              className=" text-3xl text-gradient animate-glow"
+            >
               Enigma 4.0
             </span>
           </div>
@@ -48,7 +51,7 @@ const Navbar = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ff9900] group-hover:w-full transition-all duration-300"></span>
               </button>
             ))}
-            <button className="bg-gradient-to-r from-[#8b5a2b] to-[#ffcc33] hover:from-[#ffcc33] hover:to-[#8b5a2b] text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 neon-border">
+            <button className="bg-gradient-to-r from-[#8b5a2b] to-[#ffcc33] hover:from-[#ffcc33] hover:to-[#8b5a2b] text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-102 neon-border">
               Register Now
             </button>
             {/* <img className="h-40 w-40" src="/SIES_GST_WHITE_LOGO.png" alt="" /> */}

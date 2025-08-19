@@ -7,26 +7,33 @@ const About = () => {
       title: "What Awaits You",
       color: "#2aff6d",
       description:
-        "Step into the Time Variance Authority and prove your worth as a developer. This isn't just another hackathon – it's a test of your ability to create something truly extraordinary under pressure.",
+        "This isn’t just another hackathon. This is your trial by fire as a Variant:",
       items: [
-        "48 hours of intense coding",
-        "Multiple challenge tracks",
-        "Expert mentorship",
-        "Glorious prizes",
+        "Solve Branches (real-world problem statements)",
+        "Collaborate with Fellow Variants (teamwork & innovation)",
+        "Face TVA Challenges (mentorship, checkpoints, evaluations)",
+        "Claim Glorious Rewards (cash prizes, recognition, goodies)",
       ],
     },
     {
       title: "The TVA Mandate",
       color: "#c6a567",
-      description: `"The Time-Keepers have created us and tasked us with the sacred duty of preserving the Sacred Timeline." Your mission: Build innovative solutions that push the boundaries of what's possible.`,
+      description: `Variants, your mission is clear: resolve the branches. Each problem statement is a broken thread of the Timeline. Restore them, and balance shall return. Only through you can Chronix be stopped.
+`,
     },
   ];
 
   const stats = [
     { value: "500+", label: "Participants", color: "#2aff6d" },
     { value: "50+", label: "Teams", color: "#c6a567" },
-    { value: "10+", label: "Mentors", color: "#3399ff" },
-    { value: "$50K", label: "In Prizes", color: "#ff3333" },
+    // { value: "10+", label: "Mentors", color: "#3399ff" },
+    // { value: "$50K", label: "In Prizes", color: "#ff3333" },
+  ];
+  const statss = [
+    // { value: "500+", label: "Participants", color: "#2aff6d" },
+    // { value: "50+", label: "Teams", color: "#c6a567" },
+    // { value: "10+", label: "Mentors", color: "#3399ff" },
+    { value: "₹20K", label: "In Prizes", color: "#ff3333" },
   ];
 
   const featureCards = [
@@ -71,7 +78,7 @@ const About = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="glass-effect-strong rounded-2xl p-10 neon-border transform hover:scale-105 transition-all duration-500"
+                className="glass-effect-strong rounded-2xl p-10 neon-border transform hover:scale-102 transition-all duration-500"
                 style={{ borderColor: feature.color }}
               >
                 <h3
@@ -113,11 +120,28 @@ const About = () => {
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="glass-effect-strong rounded-2xl p-8 text-center neon-border transform hover:scale-110 transition-all duration-500 group"
+                  className="glass-effect-strong rounded-2xl p-8 text-center neon-border transform hover:scale-102 transition-all duration-500 group"
                   style={{ borderColor: `${stat.color}30` }}
                 >
                   <div
-                    className="text-4xl font-bold mb-3 group-hover:scale-110 transition-transform duration-300"
+                    className="text-4xl font-bold mb-3 group-hover:scale-102 transition-transform duration-300"
+                    style={{ color: stat.color }}
+                  >
+                    {stat.value}
+                  </div>
+                  <div className="text-[#b6c8b8]">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+            <div className="grid grid-cols-1 gap-6">
+              {statss.map((stat, index) => (
+                <div
+                  key={index}
+                  className="glass-effect-strong rounded-2xl p-8 text-center neon-border transform hover:scale-102 transition-all duration-500 group"
+                  style={{ borderColor: `${stat.color}30` }}
+                >
+                  <div
+                    className="text-4xl font-bold mb-3 group-hover:scale-102 transition-transform duration-300"
                     style={{ color: stat.color }}
                   >
                     {stat.value}
@@ -132,7 +156,7 @@ const About = () => {
               {featureCards.map((card, index) => (
                 <div
                   key={index}
-                  className="glass-effect-strong rounded-2xl p-8 transform hover:scale-105 transition-all duration-500 neon-border group"
+                  className="glass-effect-strong rounded-2xl p-8 transform hover:scale-102 transition-all duration-500 neon-border group"
                   style={{
                     transform:
                       index % 2 === 0 ? "hover:rotate-1" : "hover:-rotate-1",

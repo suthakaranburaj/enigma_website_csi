@@ -45,12 +45,12 @@ const Hero = () => {
     };
   }, []);
 
-    const scrollToSection = (sectionId) => {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    };
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <section id="home" className="min-h-screen relative overflow-hidden">
@@ -65,19 +65,25 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 max-w-8xl mx-auto lg:ml-10 px-1 sm:px-6 lg:px-0 lg:pl-8 pt-60 sm:pt-32 pb-20">
-        <div className="flex flex-col lg:flex-row items-center">
+        <div className="flex flex-col lg:flex-row items-center justify-center ">
           {/* Left Content */}
           <div className="lg:w-1/2 text-center lg:text-left mb-16 lg:mb-0">
             {/* Main Title */}
             <div className="mb-12">
-              <h1 className="font-cinzel hero-title font-bold mb-6">
+              <h1
+                style={{ fontFamily: "Mestizo" }}
+                className=" hero-title mb-6"
+              >
                 <span className="text-gradient-glow animate-glow block">
                   Enigma 4.0
                 </span>
               </h1>
-              <h2 className="font-cinzel text-4xl md:text-6xl font-semibold text-[#f27900] mb-8 animate-pulse">
+              {/* <h2 className="font-cinzel text-4xl md:text-6xl font-semibold text-[#f27900] mb-8 animate-pulse">
                 HACKATHON 2025
-              </h2>
+              </h2> */}
+              <div className="flex justify-center lg:justify-start ml-2 sm:-ml-8">
+                <img className="h-16 sm:h-32" src="/Choronix.png" alt="" />
+              </div>
               <div className="relative inline-block">
                 <p className="text-2xl md:text-3xl text-[#b6c8b8] font-medium italic animate-glow">
                   "For All Time. Always."
@@ -103,32 +109,32 @@ const Hero = () => {
             {/* Countdown Timer */}
             <div className="mb-16 max-w-2xl mx-auto lg:mx-0">
               <div className="grid grid-cols-4 gap-4">
-                <div className="glass-effect rounded-xl p-4 neon-border">
-                  <div className="text-3xl md:text-5xl font-bold text-[#ffcc33] mb-2">
+                <div className="glass-effect rounded-4xl p-4 neon-border">
+                  <div className="text-3xl md:text-5xl font-bold text-[#ff6600] mb-2">
                     {days.toString().padStart(2, "0")}
                   </div>
                   <div className="text-[#b6c8b8] text-sm md:text-base">
                     Days
                   </div>
                 </div>
-                <div className="glass-effect rounded-xl p-4 neon-border">
-                  <div className="text-3xl md:text-5xl font-bold text-[#2aff6d] mb-2">
+                <div className="glass-effect rounded-4xl p-4 neon-border">
+                  <div className="text-3xl md:text-5xl font-bold text-[#ff6600] mb-2">
                     {hours.toString().padStart(2, "0")}
                   </div>
                   <div className="text-[#b6c8b8] text-sm md:text-base">
                     Hours
                   </div>
                 </div>
-                <div className="glass-effect rounded-xl p-4 neon-border">
-                  <div className="text-3xl md:text-5xl font-bold text-[#3399ff] mb-2">
+                <div className="glass-effect rounded-4xl p-4 neon-border">
+                  <div className="text-3xl md:text-5xl font-bold text-[#ff6600] mb-2">
                     {minutes.toString().padStart(2, "0")}
                   </div>
                   <div className="text-[#b6c8b8] text-sm md:text-base">
                     Minutes
                   </div>
                 </div>
-                <div className="glass-effect rounded-xl p-4 neon-border">
-                  <div className="text-3xl md:text-5xl font-bold text-[#ff3333] mb-2">
+                <div className="glass-effect rounded-4xl p-4 neon-border">
+                  <div className="text-3xl md:text-5xl font-bold text-[#ff6600] mb-2">
                     {seconds.toString().padStart(2, "0")}
                   </div>
                   <div className="text-[#b6c8b8] text-sm md:text-base">
@@ -140,11 +146,11 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center">
-              <button className="group relative overflow-hidden bg-gradient-to-r from-[#8b5a2b] to-[#ffcc33] hover:from-[#ffcc33] hover:to-[#8b5a2b] text-white px-10 py-4 rounded-xl font-bold text-xl transition-all duration-500 transform hover:scale-110 neon-border">
+              <button className="group relative overflow-hidden bg-gradient-to-r from-[#8b5a2b] to-[#ffcc33] hover:from-[#ffcc33] hover:to-[#8b5a2b] text-white px-10 py-4 rounded-xl font-bold text-xl transition-all duration-500 transform hover:scale-102 neon-border">
                 <span className="relative z-10 cursor-pointer">Register</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#ffcc33] to-[#8b5a2b] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </button>
-              <button className="group relative border-2 border-[#2aff6d] text-[#2aff6d] hover:bg-[#2aff6d] hover:text-[#0b2a1c] px-10 py-4 rounded-xl font-bold text-xl transition-all duration-500 transform hover:scale-110 neon-border overflow-hidden">
+              <button className="group relative border-2 border-[#2aff6d] text-[#2aff6d] hover:bg-[#2aff6d] hover:text-[#0b2a1c] px-10 py-4 rounded-xl font-bold text-xl transition-all duration-500 transform hover:scale-102 neon-border overflow-hidden">
                 <span
                   onClick={() => scrollToSection("timeline")}
                   className="relative z-10 cursor-pointer"
@@ -157,7 +163,7 @@ const Hero = () => {
           </div>
 
           {/* Right Image */}
-          <div className="lg:w-1/2 flex justify-center">
+          <div className="hidden sm:flex lg:w-1/2 justify-center">
             <div className="aspect-square w-full rounded-xl overflow-hidden flex items-center justify-end">
               {/* Loki Image */}
               <img

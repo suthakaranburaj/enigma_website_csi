@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Mestizo';
+  src: url('/fonts/MestizoFont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --background: #ffffff; /* Retain white background */
   --foreground: #171717;

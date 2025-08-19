@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import PrizeCard from "./PrizeCard";
 
@@ -85,7 +85,7 @@ const Prizes = () => {
           {specialPrizes.map((prize, index) => (
             <div
               key={index}
-              className="glass-effect-strong rounded-2xl p-8 neon-border transform hover:scale-105 transition-all duration-500"
+              className="glass-effect-strong rounded-2xl p-8 neon-border transform hover:scale-102 transition-all duration-500"
               style={{ borderColor: `${prize.color}30` }}
             >
               <h3
