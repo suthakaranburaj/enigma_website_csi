@@ -15,7 +15,10 @@ const PrizeHighlight = () => {
   }, []);
 
   return (
-    <section className="py-16 relative flex flex-col items-center justify-center text-center overflow-hidden">
+    <section
+      id="prizes"
+      className="py-16 relative flex flex-col items-center justify-center text-center overflow-hidden"
+    >
       {/* Animated background elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a2a1e]/40 to-transparent"></div>
 
