@@ -31,6 +31,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/logo_loki.PNG" type="image/png" />
+        <link rel="apple-touch-icon" href="/logo.ico" />
+        <link rel="manifest" href="/logo_loki.PNG" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="Enigma 4.0 - Hackathon" />
+        <meta property="og:type" content="website" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

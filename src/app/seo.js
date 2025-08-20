@@ -1,7 +1,7 @@
 export const SEO = {
-  title: "Enigma 4.0 Hackathon 2025 | Choronix | SIESGST",
+  title: "Enigma 4.0 Hackathon 2025 | CSI | SIESGST",
   description:
-    "Join Enigma 4.0 Hackathon 2025 by Choronix at SIESGST – the ultimate coding battle where innovation meets creativity. Register now and showcase your skills!",
+    "Join Enigma 4.0 by CSI at SIESGST – the ultimate coding battle where innovation meets creativity. Register now and showcase your skills!",
   keywords: [
     "Hackathon 2025",
     "Enigma 4.0",
@@ -14,16 +14,16 @@ export const SEO = {
     "student hackathon",
     "hackathon India 2025",
   ],
-  author: "Choronix | SIESGST",
+  author: "CSI | SIESGST",
   openGraph: {
-    title: "Enigma 4.0 Hackathon 2025 | Choronix | SIESGST",
+    title: "Enigma 4.0 Hackathon 2025 | CSI | SIESGST",
     description:
-      "Compete in Enigma 4.0 Hackathon 2025 – a coding and innovation marathon hosted by Choronix at SIESGST. Build, innovate, and win exciting prizes!",
+      "Compete in Enigma 4.0 Hackathon 2025 –  One Event. Infinite Realities hosted by CSI at SIESGST. Build, innovate, and win exciting prizes!",
     url: "https://enigma-website-csi.vercel.app", // replace with your actual domain
     siteName: "Enigma Hackathon 2025",
     images: [
       {
-        url: "https://enigma-website-csi.vercel.app/og-image.png", // ✅ create a nice OG banner
+        url: "https://enigma-website-csi.vercel.app/logo_loki.PNG", // ✅ create a nice OG banner
         width: 1200,
         height: 630,
         alt: "Enigma 4.0 Hackathon 2025 Banner",
@@ -38,6 +38,6 @@ export const SEO = {
     title: "Enigma 4.0 Hackathon 2025",
     description:
       "Register now for Enigma 4.0 Hackathon 2025 hosted by Choronix at SIESGST and showcase your coding skills!",
-    image: "https://enigma-website-csi.vercel.app/og-image.png",
+    image: "https://enigma-website-csi.vercel.app/logo_loki.PNG",
   },
 };
