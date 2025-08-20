@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
       <div
         className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/loki.jpg')`,
+          backgroundImage: `url('/loki_2.jpg')`,
           filter: "brightness(1) contrast(1.3)",
         }}
       />
