@@ -72,14 +72,14 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen relative overflow-hidden">
       {/* Dynamic Particles */}
-      <div className="absolute inset-0">
+      {/* <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-3 h-3 bg-[#ff9900] rounded-full animate-pulse-slow shadow-lg shadow-[#ff9900]/50"></div>
         <div className="absolute top-40 right-20 w-4 h-4 bg-[#c6a567] rounded-full animate-pulse opacity-60 shadow-lg shadow-[#c6a567]/50"></div>
         <div className="absolute bottom-40 left-1/4 w-2 h-2 bg-[#3399ff] rounded-full animate-ping shadow-lg shadow-[#3399ff]/50"></div>
         <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-[#ff3333] rounded-full animate-pulse-slow opacity-40 shadow-lg shadow-[#ff3333]/50"></div>
         <div className="absolute top-60 left-1/2 w-2 h-2 bg-[#ffcc33] rounded-full animate-pulse opacity-70 shadow-lg shadow-[#ffcc33]/50"></div>
         <div className="absolute bottom-60 right-1/4 w-2 h-2 bg-[#2aff6d] rounded-full animate-ping opacity-50 shadow-lg shadow-[#2aff6d]/50"></div>
-      </div>
+      </div> */}
 
       <motion.div
         initial={{ opacity: 0, y: 0 }}
