@@ -29,7 +29,7 @@ const Footer = () => {
     },
     {
       name: "Sahil Khairnar",
-      role: "Management Lead - Enigma 4.0",
+      role: "Marketing Lead - Enigma 4.0",
       phone: "9370070202",
       email: "sahilk2303@gmail.com",
     },
