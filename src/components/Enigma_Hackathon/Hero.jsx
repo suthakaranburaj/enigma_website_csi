@@ -11,49 +11,47 @@ const Hero = () => {
   const [seconds, setSeconds] = useState(0);
   const [dayProgress, setDayProgress] = useState(0);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
 
-useEffect(() => {
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
-  };
+    window.addEventListener("scroll", handleScroll);
 
-  window.addEventListener("scroll", handleScroll);
+    const startDate = new Date("2025-08-20T00:00:00");
+    const endDate = new Date("2025-09-20T00:00:00");
 
-  const startDate = new Date("2025-08-20T00:00:00");
-  const endDate = new Date("2025-09-20T00:00:00");
+    const calculateTimeLeft = () => {
+      const now = new Date();
+      const difference = endDate - now;
 
-  const calculateTimeLeft = () => {
-    const now = new Date();
-    const difference = endDate - now;
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((difference / 1000 / 60) % 60);
+        const seconds = Math.floor((difference / 1000) % 60);
 
-    if (difference > 0) {
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((difference / 1000 / 60) % 60);
-      const seconds = Math.floor((difference / 1000) % 60);
+        setDays(days);
+        setHours(hours);
+        setMinutes(minutes);
+        setSeconds(seconds);
+      }
 
-      setDays(days);
-      setHours(hours);
-      setMinutes(minutes);
-      setSeconds(seconds);
-    }
+      // ✅ Progress calculation
+      const totalDuration = endDate - startDate;
+      const elapsed = now - startDate;
+      const progress = Math.min((elapsed / totalDuration) * 100, 100); // cap at 100%
+      setDayProgress(progress);
+    };
 
-    // ✅ Progress calculation
-    const totalDuration = endDate - startDate;
-    const elapsed = now - startDate;
-    const progress = Math.min((elapsed / totalDuration) * 100, 100); // cap at 100%
-    setDayProgress(progress);
-  };
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
 
-  calculateTimeLeft();
-  const timer = setInterval(calculateTimeLeft, 1000);
-
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-    clearInterval(timer);
-  };
-}, []);
-
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearInterval(timer);
+    };
+  }, []);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -109,7 +107,7 @@ useEffect(() => {
                 <img className="h-16 sm:h-32" src="/Choronix.png" alt="" />
               </div>
               <div className="relative inline-block">
-                <p className="text-2xl md:text-3xl text-[#b6c8b8] font-medium italic animate-glow">
+                <p className="text-2xl md:text-3xl text-white font-medium italic animate-glow">
                   "For All Time. Always."
                 </p>
                 <div className="absolute -inset-2 bg-gradient-to-r from-[#2aff6d]/20 to-[#c6a567]/20 rounded-lg blur-xl -z-10 animate-pulse"></div>
@@ -123,7 +121,7 @@ useEffect(() => {
                   <p className="text-xl md:text-2xl text-gradient font-bold">
                     Code Your Glorious Purpose
                   </p>
-                  <p className="text-sm md:text-base text-[#b6c8b8] mt-2 opacity-80">
+                  <p className="text-sm md:text-base text-white mt-2 opacity-80">
                     Where chaos meets creativity
                   </p>
                 </div>
@@ -144,7 +142,7 @@ useEffect(() => {
                   <div className="relative text-3xl md:text-5xl font-bold text-[rgb(42,255,109)] mb-2">
                     {days.toString().padStart(2, "0")}
                   </div>
-                  <div className="relative text-[#b6c8b8] text-sm md:text-base">
+                  <div className="relative text-white text-sm md:text-base">
                     Days
                   </div>
                 </div>
@@ -158,7 +156,7 @@ useEffect(() => {
                   <div className="relative text-3xl md:text-5xl font-bold text-[#2aff6d] mb-2">
                     {hours.toString().padStart(2, "0")}
                   </div>
-                  <div className="relative text-[#b6c8b8] text-sm md:text-base">
+                  <div className="relative text-white text-sm md:text-base">
                     Hours
                   </div>
                 </div>
@@ -172,7 +170,7 @@ useEffect(() => {
                   <div className="relative text-3xl md:text-5xl font-bold text-[#2aff6d] mb-2">
                     {minutes.toString().padStart(2, "0")}
                   </div>
-                  <div className="relative text-[#b6c8b8] text-sm md:text-base">
+                  <div className="relative text-white text-sm md:text-base">
                     Minutes
                   </div>
                 </div>
@@ -186,7 +184,7 @@ useEffect(() => {
                   <div className="relative text-3xl md:text-5xl font-bold text-[#2aff6d] mb-2">
                     {seconds.toString().padStart(2, "0")}
                   </div>
-                  <div className="relative text-[#b6c8b8] text-sm md:text-base">
+                  <div className="relative text-white text-sm md:text-base">
                     Seconds
                   </div>
                 </div>

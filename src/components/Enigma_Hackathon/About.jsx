@@ -69,7 +69,7 @@ const About = () => {
           <h2 className="font-cinzel text-5xl md:text-7xl font-bold text-gradient mb-8 animate-glow">
             The Variant Event
           </h2>
-          <p className="text-xl md:text-2xl text-[#b6c8b8] max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-white max-w-4xl mx-auto leading-relaxed">
             Welcome to a hackathon unlike any other. Where chaos meets
             creativity, and every line of code has the potential to branch the
             sacred timeline.
@@ -92,7 +92,7 @@ const About = () => {
                 >
                   {feature.title}
                 </h3>
-                <p className="text-[#b6c8b8] mb-8 leading-relaxed text-lg">
+                <p className="text-white mb-8 leading-relaxed text-lg">
                   {feature.description}
                 </p>
                 {feature.items && (
@@ -109,7 +109,7 @@ const About = () => {
                             boxShadow: `${feature.color}50 0 0 8px`,
                           }}
                         ></div>
-                        <span className="text-[#b6c8b8] text-lg">{item}</span>
+                        <span className="text-white text-lg">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -134,7 +134,7 @@ const About = () => {
                   >
                     {stat.value}
                   </div>
-                  <div className="text-[#b6c8b8]">{stat.label}</div>
+                  <div className="text-white">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -151,7 +151,7 @@ const About = () => {
                   >
                     {stat.value}
                   </div>
-                  <div className="text-[#b6c8b8]">{stat.label}</div>
+                  <div className="text-white">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -174,7 +174,7 @@ const About = () => {
                   >
                     {card.title}
                   </h4>
-                  <p className="text-[#b6c8b8] group-hover:text-white transition-colors duration-300">
+                  <p className="text-white group-hover:text-white transition-colors duration-300">
                     {card.description}
                   </p>
                 </div>

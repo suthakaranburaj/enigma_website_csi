@@ -28,8 +28,8 @@ const TimelineItem = ({ event }) => {
               >
                 {title}
               </h3>
-              <p className="text-[#b6c8b8] mb-2">{date}</p>
-              <p className="text-sm text-[#b6c8b8]/80">{description}</p>
+              <p className="text-white mb-2">{date}</p>
+              <p className="text-sm text-white">{description}</p>
             </div>
           </motion.div>
           <div
@@ -90,8 +90,8 @@ const TimelineItem = ({ event }) => {
               >
                 {title}
               </h3>
-              <p className="text-[#b6c8b8] mb-2">{date}</p>
-              <p className="text-sm text-[#b6c8b8]/80">{description}</p>
+              <p className="text-white mb-2">{date}</p>
+              <p className="text-sm text-white">{description}</p>
             </div>
           </motion.div>
         </>

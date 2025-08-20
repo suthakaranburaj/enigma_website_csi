@@ -52,9 +52,7 @@ const Footer = () => {
           >
             Enigma 4.0
           </div>
-          <p className="text-[#b6c8b8] italic text-xl">
-            "Glorious Purpose Awaits"
-          </p>
+          <p className="text-white italic text-xl">"Glorious Purpose Awaits"</p>
         </div>
 
         <div className="flex justify-center space-x-12 mb-12">
@@ -62,7 +60,7 @@ const Footer = () => {
             <a
               key={index}
               href={link.href}
-              className="text-[#b6c8b8] hover:text-[#ff9900] transition-all duration-300 transform hover:scale-102 text-lg"
+              className="text-white hover:text-[#ff9900] transition-all duration-300 transform hover:scale-102 text-lg"
             >
               {link.label}
             </a>
@@ -83,12 +81,10 @@ const Footer = () => {
                 <h4 className="text-lg font-semibold text-[#ff9900]">
                   {contact.name}
                 </h4>
-                <p className="text-[#b6c8b8] text-sm mb-1">{contact.role}</p>
-                <p className="text-[#b6c8b8] text-sm">{contact.phone}</p>
+                <p className="text-white text-sm mb-1">{contact.role}</p>
+                <p className="text-white text-sm">{contact.phone}</p>
                 {contact.email && (
-                  <p className="text-[#b6c8b8] text-sm truncate">
-                    {contact.email}
-                  </p>
+                  <p className="text-white text-sm truncate">{contact.email}</p>
                 )}
               </div>
             ))}
@@ -105,7 +101,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-[#133523] pt-8">
-          <p className="text-[#b6c8b8]">
+          <p className="text-white">
             © 2025 Enigma 4.0 Hackathon. All timelines reserved. | TVA Approved
             Event
           </p>

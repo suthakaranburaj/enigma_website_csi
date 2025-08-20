@@ -46,7 +46,7 @@ const PrizeHighlight = () => {
         <h2 className="font-bold text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 mb-1">
           Prize Pool
         </h2>
-        {/* <p className="text-lg text-[#b6c8b8] max-w-md mx-auto">
+        {/* <p className="text-lg text-white max-w-md mx-auto">
           Win this magnificent trophy and claim your place among the champions
         </p> */}
       </div>
@@ -80,7 +80,7 @@ const PrizeHighlight = () => {
           <div className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500">
             ₹20,000
           </div>
-          <div className="text-[#b6c8b8] mt-2 text-sm">Cash Prize</div>
+          <div className="text-white mt-2 text-sm">Cash Prize</div>
         </div>
       </div>
 

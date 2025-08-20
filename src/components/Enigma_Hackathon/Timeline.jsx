@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import TimelineItem from "./TimelineItem";
 import { motion } from "framer-motion";
@@ -135,7 +135,7 @@ const Timeline = () => {
           <h2 className="font-cinzel text-5xl md:text-7xl font-bold text-gradient mb-8 animate-glow">
             Sacred Timeline
           </h2>
-          <p className="text-xl text-[#b6c8b8] max-w-3xl mx-auto">
+          <p className="text-xl text-white max-w-3xl mx-auto">
             Follow the predetermined path to hackathon glory
           </p>
         </div>

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 const PrizeCard = ({ prize }) => {
   const { position, title, value, color, icon, items } = prize;
 
@@ -34,7 +34,7 @@ const PrizeCard = ({ prize }) => {
             {title}
           </h4>
         </div>
-        {/* <ul className="text-[#b6c8b8] space-y-3 text-left">
+        {/* <ul className="text-white space-y-3 text-left">
           {items.map((item, index) => (
             <li key={index} className="flex items-center space-x-3">
               <div
