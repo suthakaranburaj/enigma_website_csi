@@ -8,6 +8,7 @@ import Timeline from "./Timeline";
 import Prizes from "./Prizes";
 import Footer from "./Footer";
 import LokiStyles from "./LokiStyles";
+import Guidelines from "./Guidelines";
 
 const LokiHackathon = () => {
   return (
@@ -19,6 +20,7 @@ const LokiHackathon = () => {
         <About />
         <Timeline />
         <Prizes />
+        <Guidelines />
         <Footer />
       </Layout>
     </>
