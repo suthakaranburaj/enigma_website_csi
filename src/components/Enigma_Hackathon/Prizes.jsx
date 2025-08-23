@@ -81,7 +81,7 @@ const PrizeHighlight = () => {
         {/* Prize Highlight Card */}
         <div className="mt-8 px-10 py-4 rounded-2xl glass-effect border-2 border-yellow-500/30 shadow-lg">
           <div className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500">
-            ₹20,000
+            ₹25,000
           </div>
           <div className="text-white mt-2 text-sm">Cash Prize</div>
         </div>

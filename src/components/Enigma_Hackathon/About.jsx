@@ -33,7 +33,7 @@ const About = () => {
     // { value: "500+", label: "Participants", color: "#2aff6d" },
     // { value: "50+", label: "Teams", color: "#c6a567" },
     // { value: "10+", label: "Mentors", color: "#3399ff" },
-    { value: "₹20K", label: "In Prizes", color: "#ff3333" },
+    { value: "₹25K", label: "In Prizes", color: "#ff3333" },
   ];
 
   const featureCards = [
