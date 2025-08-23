@@ -330,7 +330,7 @@ const Hero = () => {
               </div>
               <div className="relative inline-block">
                 <p className="text-2xl md:text-3xl text-white font-medium italic animate-glow">
-                  "For All Time. Always."
+                  "One Event. Infinite Realities."
                 </p>
                 <div className="absolute -inset-2 bg-gradient-to-r from-[#2aff6d]/20 to-[#c6a567]/20 rounded-lg blur-xl -z-10 animate-pulse"></div>
               </div>
@@ -402,7 +402,7 @@ const Hero = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center">
               <button className="group relative overflow-hidden bg-gradient-to-r from-[#8b5a2b] to-[#ffcc33] hover:from-[#ffcc33] hover:to-[#8b5a2b] text-white px-10 py-4 rounded-xl font-bold text-xl transition-all duration-500 transform hover:scale-102 neon-border">
-                <span className="relative z-10 cursor-pointer">Register</span>
+                <a href="https://unstop.com/p/enigma-40-a-web-development-hackathon-sies-graduate-school-of-technology-navi-mumbai-maharashtra-1545848" target="_blank" className="relative z-10 cursor-pointer">Register</a>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#ffcc33] to-[#8b5a2b] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </button>
               <button className="group relative border-2 border-[#2aff6d] text-[#2aff6d] hover:bg-[#2aff6d] hover:text-[#0b2a1c] px-10 py-4 rounded-xl font-bold text-xl transition-all duration-500 transform hover:scale-102 neon-border overflow-hidden">

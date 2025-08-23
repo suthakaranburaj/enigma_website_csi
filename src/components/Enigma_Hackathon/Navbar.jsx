@@ -56,9 +56,9 @@ const Navbar = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ff9900] group-hover:w-full transition-all duration-300"></span>
               </button>
             ))}
-            <button className="bg-gradient-to-r from-[#8b5a2b] to-[#ffcc33] hover:from-[#ffcc33] hover:to-[#8b5a2b] text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-102 neon-border cursor-pointer">
+            <a href="https://unstop.com/p/enigma-40-a-web-development-hackathon-sies-graduate-school-of-technology-navi-mumbai-maharashtra-1545848" target="_blank" className="bg-gradient-to-r from-[#8b5a2b] to-[#ffcc33] hover:from-[#ffcc33] hover:to-[#8b5a2b] text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-102 neon-border cursor-pointer">
               Register Now
-            </button>
+            </a>
             {/* <img className="h-40 w-40" src="/SIES_GST_WHITE_LOGO.png" alt="" /> */}
           </div>
 
