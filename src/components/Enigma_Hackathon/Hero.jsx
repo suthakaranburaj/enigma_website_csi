@@ -329,8 +329,8 @@ const Hero = () => {
                 <img className="h-16 sm:h-32" src="/Choronix.png" alt="" />
               </div>
               <div className="relative inline-block">
-                <p className="text-2xl md:text-3xl text-white font-medium italic animate-glow">
-                  "One Event. Infinite Realities."
+                <p className="text-2xl  md:text-3xl text-white font-medium animate-glow">
+                  One Event.  Realities.
                 </p>
                 <div className="absolute -inset-2 bg-gradient-to-r from-[#2aff6d]/20 to-[#c6a567]/20 rounded-lg blur-xl -z-10 animate-pulse"></div>
               </div>
