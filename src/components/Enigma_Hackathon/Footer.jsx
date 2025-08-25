@@ -93,7 +93,7 @@ const Footer = () => {
 
         <div className="mt-8">
           <a
-            href="https://unstop.com/p/enigma-40-a-web-development-hackathon-sies-graduate-school-of-technology-navi-mumbai-maharashtra-1545848"
+            href="https://mstats.dare2compete.com/CL0/https:%2F%2Funstop.com%2Fhackathons%2Fenigma-40-a-web-development-hackathon-sies-graduate-school-of-technology-navi-mumbai-maharashtra-1545848%3Futm_campaign=site-emails%26utm_medium=d2c-automated%26utm_source=opportunity-approved/1/01090198dd19b8a9-edf860dd-c965-4da4-a47d-3f69dd06d7c5-000000/iPHU9-7jvWhUJcuV8-WXfxYaAcsMB9TwHmafn2UjLjo=221"
             target="_blank"
             className="bg-[#ff9900] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-102 cursor-pointer"
           >
