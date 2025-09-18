@@ -1,8 +1,57 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(0);
+  const router = useRouter();
+
+  // Initialize timer
+  useEffect(() => {
+    const now = new Date();
+    const today = now.toDateString();
+    const storedDate = localStorage.getItem("timerDate");
+    const storedTime = localStorage.getItem("timerEnd");
+
+    // Check if we have a stored timer for today
+    if (storedDate === today && storedTime) {
+      const remaining = Math.max(
+        0,
+        Math.floor((parseInt(storedTime) - now.getTime()) / 1000)
+      );
+      setTimeLeft(remaining);
+    } else {
+      // Set new timer for today (1 hour from now)
+      const endTime = new Date();
+      endTime.setHours(now.getHours() + 1);
+
+      localStorage.setItem("timerDate", today);
+      localStorage.setItem("timerEnd", endTime.getTime().toString());
+      setTimeLeft(3600);
+    }
+  }, []);
+
+  // Countdown timer effect
+  useEffect(() => {
+    if (timeLeft <= 0) return;
+
+    const timer = setInterval(() => {
+      setTimeLeft((prevTime) => prevTime - 1);
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [timeLeft]);
+
+  // Format time as MM:SS
+  const formatTime = (seconds) => {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    return `${minutes.toString().padStart(2, "0")}:${remainingSeconds
+      .toString()
+      .padStart(2, "0")}`;
+  };
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -10,6 +59,11 @@ const Navbar = () => {
       element.scrollIntoView({ behavior: "smooth" });
       setIsMenuOpen(false);
     }
+  };
+
+  const handleProblemStatementClick = () => {
+    router.push("/problemstatement");
+    setIsMenuOpen(false);
   };
 
   const navItems = [
@@ -21,9 +75,9 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 w-full z-50 glass-effect-strong">
-      <motion.div
+      <div
         initial={{ opacity: 0, y: 0 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        // whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
@@ -31,9 +85,6 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <div className="w-24 h-24 bg-white/0 rounded-lg flex items-center justify-center">
-              {/* <span className="text-[#0b2a1c] font-cinzel font-bold text-xl">
-                L
-              </span> */}
               <img src="/csilogo.png" alt="" />
             </div>
             <span
@@ -56,10 +107,20 @@ const Navbar = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ff9900] group-hover:w-full transition-all duration-300"></span>
               </button>
             ))}
-            <a href="https://mstats.dare2compete.com/CL0/https:%2F%2Funstop.com%2Fhackathons%2Fenigma-40-a-web-development-hackathon-sies-graduate-school-of-technology-navi-mumbai-maharashtra-1545848%3Futm_campaign=site-emails%26utm_medium=d2c-automated%26utm_source=opportunity-approved/1/01090198dd19b8a9-edf860dd-c965-4da4-a47d-3f69dd06d7c5-000000/iPHU9-7jvWhUJcuV8-WXfxYaAcsMB9TwHmafn2UjLjo=221" target="_blank" className="bg-gradient-to-r from-[#8b5a2b] to-[#ffcc33] hover:from-[#ffcc33] hover:to-[#8b5a2b] text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-102 neon-border cursor-pointer">
-              Register Now
-            </a>
-            {/* <img className="h-40 w-40" src="/SIES_GST_WHITE_LOGO.png" alt="" /> */}
+            <div className="flex items-center">
+              <button
+                onClick={handleProblemStatementClick}
+                className="hover:text-[#ff9900] transition-all duration-300 font-medium relative group flex items-center"
+              >
+                Problem Statement
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ff9900] group-hover:w-full transition-all duration-300"></span>
+              </button>
+              {timeLeft > 0 && (
+                <div className="ml-2 bg-red-500 text-white px-2 py-1 rounded-md text-xs font-bold">
+                  {formatTime(timeLeft)}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -84,7 +145,7 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
@@ -99,6 +160,19 @@ const Navbar = () => {
                 {item.label}
               </button>
             ))}
+            <div className="flex justify-between items-center px-3 py-2">
+              <button
+                onClick={handleProblemStatementClick}
+                className="text-base font-medium hover:text-[#ff9900] transition-colors duration-300 text-left"
+              >
+                Problem Statement
+              </button>
+              {timeLeft > 0 && (
+                <div className="bg-red-500 text-white px-2 py-1 rounded-md text-xs font-bold">
+                  {formatTime(timeLeft)}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}
