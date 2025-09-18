@@ -22,6 +22,7 @@ const LokiHackathon = () => {
         <Prizes />
         <Guidelines />
         <Footer />
+
       </Layout>
     </>
   );
