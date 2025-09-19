@@ -26,10 +26,10 @@ const ProblemStatements = () => {
   const getFileName = (categoryIndex, itemIndex) => {
     if (categoryIndex === 0) {
       // FinTech PS
-      return itemIndex === 0 ? "Fintech_PS1.docx" : "Fintech_PS2.docx";
+      return itemIndex === 0 ? "Fintech_PS1.pdf" : "Fintech_PS2.pdf";
     } else {
       // Health Tech PS
-      return itemIndex === 0 ? "HealthTech_PS1.docx" : "HealthTech_PS2.docx";
+      return itemIndex === 0 ? "HealthTech_PS1.pdf" : "HealthTech_PS2.pdf";
     }
   };
 
