@@ -266,7 +266,7 @@ const Hero = () => {
     window.addEventListener("scroll", handleScroll);
 
     const startDate = new Date("2025-08-20T00:00:00");
-    const endDate = new Date("2025-09-20T00:00:00");
+    const endDate = new Date("2025-09-20T00:09:15");
 
     const calculateTimeLeft = () => {
       const now = new Date();
